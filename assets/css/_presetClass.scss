@@ -1,0 +1,82 @@
+@import './params';
+
+// 公共类
+.h100 {height: 100%}
+.w100 {width: 100%}
+.posr {position: relative}
+.posa {position: absolute}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.w1000 {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+div, a {
+  box-sizing: border-box;
+  outline: none;
+}
+button {
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  font-size: inherit;
+  -webkit-appearance: none;
+}
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  &::-webkit-input-placeholder{color:$commonGray}
+  &.flex-1 {flex: 1}
+}
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: inherit;
+  &::-webkit-input-placeholder{color:$commonGray}
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+ul, li {list-style: none;}
+i, em {font-style: normal;}
+#ie9-tips {
+  height: 46px;
+  line-height: 46px;
+  font-size: 16px;
+  text-align: center;
+  background: $commonRed;
+  color: #fff;
+  display: none;
+}
+#ie9-tips a {
+  color: #fff;
+  text-decoration: underline
+}
+#hundsun-iframe {display: none}
+//年月选中/滑过样式
+.el-year-table td .cell:hover, .el-year-table td.current:not(.disabled) .cell,.el-year-table td.today .cell,
+.el-month-table td .cell:hover, .el-month-table td.current:not(.disabled) .cell,.el-month-table td.today .cell{
+  color: #fff !important;
+  background-color: #01ccff !important;
+  border-radius: 4px !important;
+  font-size: 15px !important;
+  width: 60px;
+  text-align: center;
+}
+.pages-container-position {
+  position: relative;
+  top: -100px;
+}

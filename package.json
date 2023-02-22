@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev --port=20001 --mode dev",
+    "build": "nuxt build",
+    "build-test": "nuxt build --mode test",
+    "build-pro": "nuxt build --mode production",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "start": "cross-env PORT=20001 node .output/server/index.mjs"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.12"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.10",
+    "cross-env": "^7.0.3",
+    "element-plus": "^2.2.19",
+    "sass": "^1.55.0"
+  }
+}

@@ -1,0 +1,120 @@
+
+/* rem宽高
+ * 可接受最多3个参数
+ * @include wh(1px 5 em) - 第三个为单位 带单位的原样输出，不带单位的带上第三个参数
+ * @include wh(100 200) - 除以100，带单位的原样输出
+ * @include wh(80) - 除以100，带单位的原样输出
+ * @include wh() - 100%布局
+ */
+@mixin wh($num: null) {
+  @if (length($num) == 3) {
+    $w: nth($num, 1);
+    $h: nth($num, 2);
+    $unit: nth($num, 3);
+    width: if(unitless($w), $w * 1#{$unit}, $w);
+    height: if(unitless($h), $h * 1#{$unit}, $h);
+  } @else if (length($num) == 2) {
+    $w: nth($num, 1);
+    $h: nth($num, 2);
+    width: if($w == auto, auto, if(unitless($w), #{$w}px, $w));
+    height: if($h == auto, auto, if(unitless($h), #{$h}px, $h));
+  } @else if (length($num) == 1) {
+    @if ($num == null) {
+      width: 100%;
+      height: 100%;
+    } @else {
+      $length: nth($num, 1);
+      width: if($length == auto, auto, if(unitless($length), #{$length}px, $length));
+      height: if($length == auto, auto, if(unitless($length), #{$length}px, $length));
+    }
+  }
+}
+/* 设置文字样式
+ * @include font(#aaa 700 .2 .4) - 分别设置字色、字重、字号、行高，字色、字重顺序无要求
+ * @include font(black .2 .4 bold) - 字色可为单词，字重可使用string
+ * 小于100的数的第一个设置的是字号，第二个是行高，顺序不可逆
+ */
+@mixin font($obj) {
+  $mark: false;
+  @each $i in $obj {
+    @if (type-of($i) != 'list') {
+      @if (type-of($i) == 'color') {
+        color: $i;
+      } @else if(type_of($i) == 'string' or $i > 100) {
+        font-weight: $i;
+      } @else {
+        @if ($mark != true) {
+          font-size: $i * 100px;
+          $mark: true;
+        } @else {
+          line-height: $i * 100px;
+        }
+      }
+    } @else {
+      font-size: nth($i, 1) * 100px;
+      line-height: nth($i, 2) * 100px;
+    }
+  }
+}
+
+
+@mixin cImg() { // 设置img为contain
+  img {
+    @include wh();
+    object-fit: contain;
+  }
+}
+@mixin multipleLine($line: 2) { // 多行文本溢出样式
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+  //@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // ie10+的媒体查询
+  //}
+}
+@mixin bg($url, $size: contain, $pos: center, $bgc: null, $repeat: no-repeat) {
+  background: $bgc $url $repeat $pos;
+  background-size: $size;
+}
+
+@mixin scrollbar { // 滚动条样式
+  &::-webkit-scrollbar {width: 5px} // 整体
+  &:hover::-webkit-scrollbar-thumb {background-color: rgba(153, 153, 153, 1.0)} // 方块
+  &:hover::-webkit-scrollbar-track { // 轨道
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(216, 216, 216, 1.0);
+  }
+}
+
+/* 设置文字样式
+ * @include font(#aaa 700 20 40) - 分别设置字色、字重、字号、行高，字色、字重顺序无要求
+ * @include font(black 20 40 bold) - 字色可为单词，字重可使用string
+ * 小于100的数的第一个设置的是字号，第二个是行高，顺序不可逆
+ */
+@mixin nFont($obj) {
+  $mark: false;
+  @each $i in $obj {
+    @if (type-of($i) != 'list') {
+      @if (type-of($i) == 'color') {
+        color: $i;
+      } @else if (type_of($i) == 'string' or $i > 200) {
+        font-weight: $i;
+      } @else {
+        @if ($mark != true) {
+          font-size: $i * 1px;
+          $mark: true;
+        } @else {
+          @if ($i < 5) {
+            line-height: $i;
+          } @else {
+            line-height: $i * 1px;
+          }
+        }
+      }
+    } @else {
+      font-size: nth($i, 1) * 1px;
+      line-height: nth($i, 2) * 1px;
+    }
+  }
+}
+
