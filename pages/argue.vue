@@ -1,9 +1,9 @@
 <template>
-  <div class="pages-argue">
-    <h1>Vue篇</h1>
+  <common-flex direction="column" align="center" class="pages-argue">
+    <div class="pages-argue-title">Vue篇</div>
     <div v-for="i of list">
       <div class="pages-argue-company">{{ i.company }} {{i.time}}</div>
-      <div class="pages-argue-container">
+      <div class="pages-argue-container w1000">
         <div class="pages-argue-container-subject" v-for="(j, index) of i.subject">
           <span>{{index + 1}}、{{ j }}</span>
         </div>
@@ -12,10 +12,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </common-flex>
 </template>
 
 <script setup>
+import CommonFlex from "@comp/common/flex";
+
 const list = [
   {
     company: '上市公司',
@@ -108,6 +110,9 @@ const list = [
 <style lang="scss">
 .pages-argue {
   padding-left: 20px;
+  &-title {
+    @include nFont(24 #222 600)
+  }
   &-company {
     margin-top: 25px;
     @include nFont(18 #333 600)
@@ -115,7 +120,6 @@ const list = [
   &-container {
     margin: 20px 0 0 20px;
     padding: 24px;
-    width: 776px;
     border-radius: 10px;
     background-color: #F6F6F6;
     &-subject {
