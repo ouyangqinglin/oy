@@ -44,7 +44,6 @@
 
 <script setup>
 const route = useRoute()
-console.log(route.name)
 let defaultRoute = `/${route.name}`
 const handleOpen = () => {
 
@@ -60,6 +59,7 @@ const handleClose = () => {
   top: 20px;
   height: calc(100vh - 40px);
   header {
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
   }
