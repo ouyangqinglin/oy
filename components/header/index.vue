@@ -12,7 +12,7 @@
       >
         <header>
           <img class="comp-common-header-avatar" src="@img/index/avatar.jpg" alt="">
-          <h3>楼南雨</h3>
+          <h2>楼南雨</h2>
         </header>
         <el-menu-item index="/">
           <span>首页</span>
@@ -58,6 +58,7 @@ const handleClose = () => {
   position: sticky;
   top: 20px;
   height: calc(100vh - 40px);
+  padding: 20px;
   header {
     margin-bottom: 12px;
     display: flex;
