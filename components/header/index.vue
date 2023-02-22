@@ -1,23 +1,67 @@
 <template>
   <div class="comp-common-header">
-    <header>
-      <img class="comp-common-header-avatar" src="@img/index/avatar.jpg" alt="">
-    </header>
+    <client-only>
+      <el-menu
+          style="height: 100%"
+          :router="true"
+          active-text-color="#222"
+          :default-active="defaultRoute"
+          class="el-menu-vertical-demo"
+          @open="handleOpen"
+          @close="handleClose"
+      >
+        <header>
+          <img class="comp-common-header-avatar" src="@img/index/avatar.jpg" alt="">
+          <h3>楼南雨</h3>
+        </header>
+        <el-menu-item index="/">
+          <span>首页</span>
+        </el-menu-item>
+
+        <el-sub-menu index="2">
+          <template #title>
+            <span>文章系列</span>
+          </template>
+          <el-menu-item-group>
+            <el-menu-item index="/about">Vue</el-menu-item>
+          </el-menu-item-group>
+        </el-sub-menu>
+      </el-menu>
+    </client-only>
   </div>
 </template>
 
 
 
-<script  setup>
+<script setup>
+const route = useRoute()
+console.log(route.name)
+let defaultRoute = `/${route.name}`
+const handleOpen = () => {
 
+}
+const handleClose = () => {
+
+}
 </script>
 
 <style lang="scss">
 .comp-common-header {
+  height: 100vh;
+  header {
+    display: flex;
+    align-items: center;
+  }
+  min-width: 241px;
   padding: 20px;
+  background-color: #fff;
   &-avatar {
+    margin-right: 12px;
     @include wh(60);
     border-radius: 50%;
+  }
+  .is-active {
+    font-weight: 600;
   }
 }
 </style>

@@ -24,13 +24,16 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
+            script: [ { src: "/wow/wow.min.js", type: 'text/javascript' } ],
             meta: [
-                { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+                { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+                { name: 'description', content: '一个前端的自渡' },
+                { name: 'keywords', content: '一个前端的自渡' },
             ],
             link: [
-                { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
+                { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.png' },
             ],
-            title: 'Oy'
+            title: '楼南雨的个人网站'
         }
     },
     vite: {
@@ -43,7 +46,8 @@ export default defineNuxtConfig({
         },
     },
     css: [
-        '~/assets/css/_presetClass.scss'
+        '~/assets/css/_presetClass.scss',
+        'animate.css/animate.css'
     ],
     postcss: {
         config: true

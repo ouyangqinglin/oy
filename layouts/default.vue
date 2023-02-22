@@ -1,14 +1,10 @@
 <template>
-  <div class="nuxt-layout">
+  <common-flex class="nuxt-layout">
     <Header/>
     <nuxtPage />
-    <Footer />
-  </div>
+  </common-flex>
 </template>
 
-<script setup>
-
-</script>
 
 <style lang="scss">
 .nuxt-layout {
