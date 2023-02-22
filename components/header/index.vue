@@ -18,12 +18,21 @@
           <span>首页</span>
         </el-menu-item>
 
-        <el-sub-menu index="2">
+<!--        <el-sub-menu index="2">-->
+<!--          <template #title>-->
+<!--            <span>文章系列</span>-->
+<!--          </template>-->
+<!--          <el-menu-item-group>-->
+<!--            <el-menu-item index="/about">Vue</el-menu-item>-->
+<!--          </el-menu-item-group>-->
+<!--        </el-sub-menu>-->
+
+        <el-sub-menu index="3">
           <template #title>
-            <span>文章系列</span>
+            <span>面试系列</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="/about">Vue</el-menu-item>
+            <el-menu-item index="/argue">Vue面试题</el-menu-item>
           </el-menu-item-group>
         </el-sub-menu>
       </el-menu>
@@ -47,13 +56,14 @@ const handleClose = () => {
 
 <style lang="scss">
 .comp-common-header {
-  height: 100vh;
+  position: sticky;
+  top: 20px;
+  height: calc(100vh - 40px);
   header {
     display: flex;
     align-items: center;
   }
   min-width: 241px;
-  padding: 20px;
   background-color: #fff;
   &-avatar {
     margin-right: 12px;
