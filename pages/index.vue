@@ -21,7 +21,7 @@ export default {
 <style lang="scss">
 .pages-index {
   &-title {
-    margin: 200px 0 0 120px;
+    margin-top: 200px;
   }
   &-move {
     animation: moveTo linear 500ms forwards;

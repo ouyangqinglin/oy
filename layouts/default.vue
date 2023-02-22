@@ -1,7 +1,9 @@
 <template>
   <common-flex class="nuxt-layout">
     <Header/>
-    <nuxtPage />
+    <common-flex style="flex-grow: 1" justify="center">
+      <nuxtPage />
+    </common-flex>
   </common-flex>
 </template>
 
