@@ -1,11 +1,11 @@
 <template>
-  <common-flex direction="column" align="center" class="pages-argue">
+  <common-flex direction="column" align="center" class="pages-argue w100">
     <div class="pages-argue-title">Vue篇</div>
     <div v-for="i of list">
       <div class="pages-argue-company">{{ i.company }} {{i.time}}</div>
       <div class="pages-argue-container w1000">
         <div class="pages-argue-container-subject" v-for="(j, index) of i.subject">
-          <span>{{index + 1}}、{{ j }}</span>
+          <span>{{ index + 1 }}、{{ j }}</span>
         </div>
         <div class="pages-argue-container-total" v-for="k of i.total">
           <span>{{ k }}</span>
@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import CommonFlex from "@comp/common/flex";
+import CommonFlex from "@comp/common/flex.vue";
 
 const list = [
   {
@@ -118,7 +118,7 @@ const list = [
     @include nFont(18 #333 600)
   }
   &-container {
-    margin: 20px 0 0 20px;
+    margin-top: 20px;
     padding: 24px;
     border-radius: 10px;
     background-color: #F6F6F6;

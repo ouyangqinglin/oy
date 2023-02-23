@@ -34,7 +34,8 @@ const list = [
 .pages-index {
   width: 100%;
   &-title {
-    margin: 40px 0 0 20px;
+    margin: 40px auto;
+    text-align: center;
     font-size: 24px;
   }
   &-move {

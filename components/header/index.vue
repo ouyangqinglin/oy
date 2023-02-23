@@ -26,7 +26,7 @@
 <script setup>
 const routeMap = {
   '1': '/',
-  '2-1': '/argue'
+  '2-1': '/vuea/meet'
 }
 const activeIndex = ref('1')
 const handleSelect = (e) => {
@@ -48,7 +48,7 @@ const handleSelect = (e) => {
   &-logo {
     margin-top: -12px;
     margin-left: 18px;
-    @include wh(55)
+    @include wh(50)
   }
   .el-menu--horizontal {
     //margin-top: 15px;
@@ -60,17 +60,16 @@ const handleSelect = (e) => {
       color: #222 !important;
       &:hover {
         background-color: rgba(0, 0, 0, .0);
-        color: #E1322D !important;
       }
     }
     .el-menu-item {
       background-color: rgba(0, 0, 0, .0) !important;
     }
     .is-active {
-      background-color: rgba(0, 0, 0, .5) !important;
+      background-color: rgba(0, 189, 111, 1) !important;
       line-height: 36px;
       border-radius: 4px;
-      border-bottom: 2px solid #E1322D;
+      border-bottom: 2px solid #fff;
       color: #fff !important;
     }
     .el-sub-menu.is-active .el-sub-menu__title{
