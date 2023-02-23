@@ -3,11 +3,10 @@
     <client-only>
       <el-menu
           class="el-menu-custom"
-          :default-active="activeIndex"
+          default-active="1"
           mode="horizontal"
           :ellipsis="false"
           @select="handleSelect"
-          menu-trigger="click"
       >
         <img @click="navigateTo('/')" class="comp-common-header-logo" src="@img/index/favicon.png" alt="">
         <div class="flex-grow" />
@@ -30,7 +29,6 @@ const routeMap = {
   '1': '/',
   '2-1': '/vuea/meet'
 }
-const activeIndex = ref('1')
 const handleSelect = (e) => {
   if (routeMap[e]) navigateTo(routeMap[e])
 }
