@@ -44,7 +44,7 @@ const handleSelect = (e) => {
   height: 60px;
   z-index: 520;
   @include nFont(16);
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(255, 255, 255, .1);
   &-logo {
     margin-top: -12px;
     margin-left: 18px;
