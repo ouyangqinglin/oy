@@ -2,12 +2,14 @@
   <div class="comp-common-header">
     <client-only>
       <el-menu
+          class="el-menu-custom"
           :default-active="activeIndex"
           mode="horizontal"
           :ellipsis="false"
           @select="handleSelect"
+          menu-trigger="click"
       >
-        <img class="comp-common-header-logo" src="@img/index/favicon.png" alt="">
+        <img @click="navigateTo('/')" class="comp-common-header-logo" src="@img/index/favicon.png" alt="">
         <div class="flex-grow" />
         <el-menu-item index="1">首页</el-menu-item>
         <el-sub-menu index="2">
@@ -30,7 +32,6 @@ const routeMap = {
 }
 const activeIndex = ref('1')
 const handleSelect = (e) => {
-  console.log(e)
   if (routeMap[e]) navigateTo(routeMap[e])
 }
 </script>
@@ -75,8 +76,8 @@ const handleSelect = (e) => {
     .el-sub-menu.is-active .el-sub-menu__title{
       border-bottom: none;
       color: #fff !important;
-
     }
+
   }
   .flex-grow {
     flex-grow: 1;
@@ -84,5 +85,11 @@ const handleSelect = (e) => {
   .w40 {
     width: 40px;
   }
+
+}
+.el-menu--popup {
+  min-width: 115px !important;
+}
+.el-popper {
 }
 </style>
