@@ -8,9 +8,7 @@
       </el-carousel>
     </client-only>
     <div class="pages-index-title" >
-      <div class="pages-index-move">终有绿洲摇曳在沙漠。<br>
-        我相信自己， 生来犹如璀璨的夏日之花，<br>
-        不凋不败，妖冶如火， 承受心跳的负荷和呼吸的累赘， 乐此不疲。</div>
+      <div class="pages-index-move">已有的事，后必再有。已行的事，后必再行</div>
     </div>
   </div>
 </template>
@@ -40,7 +38,7 @@ const list = [
     font-size: 24px;
   }
   &-move {
-    animation: moveTo linear 500ms forwards;
+    animation: moveTo linear .5s forwards;
   }
   @keyframes moveTo {
     from {
@@ -48,14 +46,15 @@ const list = [
       opacity: 0;
     }
     to {
-      transform: translateY(-0px);
-      opacity: 1;
+      transform: translateY(-10px);
+      opacity: .9;
     }
   }
   .el-carousel {
     width: 100%;
   }
   .swiper-item {
+    background-color: #eae7e4;
     img {
       top: 0;
       left: 50%;
