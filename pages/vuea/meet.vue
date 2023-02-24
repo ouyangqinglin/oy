@@ -5,7 +5,7 @@
       <h3 class="pages-argue-company">{{ i.company }} {{i.time}}</h3>
       <div class="pages-argue-container w1000">
         <div class="pages-argue-container-subject" v-for="(j, index) of i.subject">
-          <p>{{ index + 1 }}：{{ j }}</p>
+          <common-flex><p style="min-width: 20px; text-align: right">{{ index + 1 }}</p>：<p>{{ j }}</p></common-flex>
         </div>
         <div class="pages-argue-container-total" v-for="k of i.total">
           <p>{{ k }}</p>
