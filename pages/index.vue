@@ -7,7 +7,7 @@
         </el-carousel-item>
       </el-carousel>
       <div class="pages-index-title" >
-        <div class="pages-index-move">已有的事，后必再有。已行的事，后必再行</div>
+        <h3 class="pages-index-move">已有的事，后必再有。已行的事，后必再行</h3>
       </div>
       <div class="article">
         <template v-for="(i, k) of articList">
@@ -235,7 +235,7 @@ const articList = [
   &-title {
     margin: 40px auto;
     text-align: center;
-    font-size: 24px;
+    //font-size: 24px;
   }
   &-move {
     animation: moveTo linear .5s forwards;
