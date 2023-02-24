@@ -1,6 +1,6 @@
 <template>
   <common-flex direction="column" align="center" class="pages-argue w100">
-    <div class="pages-argue-title">Vue篇</div>
+    <h2>Vue篇</h2>
     <div v-for="i of list">
       <h3 class="pages-argue-company">{{ i.company }} {{i.time}}</h3>
       <div class="pages-argue-container w1000">
@@ -110,12 +110,8 @@ const list = [
 <style lang="scss">
 .pages-argue {
   padding: 20px 0;
-  &-title {
-    @include nFont(24 #222 600)
-  }
   &-company {
     margin-top: 25px;
-    //@include nFont(18 #333 600)
   }
   &-container {
     margin-top: 20px;
@@ -124,10 +120,8 @@ const list = [
     background-color: #F6F6F6;
     &-subject {
       margin-bottom: 24px;
-      //@include nFont(16 #888 600)
     }
     &-total {
-      //@include nFont(16 #666 600 26)
       line-height: 30px;
     }
   }
