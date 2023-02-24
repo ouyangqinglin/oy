@@ -31,7 +31,7 @@
       </el-menu>
     </client-only>
     <nuxt-page></nuxt-page>
-    <el-backtop :right="100" :bottom="100" />
+    <client-only><el-backtop :right="100" :bottom="100" /></client-only>
   </common-flex>
 </template>
 

@@ -3,7 +3,7 @@
     <client-only>
       <el-menu
           class="el-menu-custom"
-          default-active="1"
+          :default-active="defaultRoute"
           mode="horizontal"
           :ellipsis="false"
           @select="handleSelect"
@@ -25,10 +25,17 @@
 
 
 <script setup>
+const route = useRoute()
+let defaultRoute = ref('1')
 const routeMap = {
   '1': '/',
   '2-1': '/vuea/meet'
 }
+
+for (let k in routeMap) {
+  if (routeMap[k] === route.path) defaultRoute.value = k
+}
+
 const handleSelect = (e) => {
   if (routeMap[e]) navigateTo(routeMap[e])
 }
