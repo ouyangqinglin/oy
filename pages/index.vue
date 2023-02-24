@@ -48,11 +48,9 @@ export default {
 
 <script setup>
 import { StarFilled } from '@element-plus/icons-vue'
-import swiperO from '@img/index/swiper-1.png'
 import swiperT from '@img/index/swiper-2.png'
 const list = [
-  swiperT,
-  swiperO,
+  swiperT
 ]
 const articList = [
     '多希望话题不断园游会永不打烊：2022年面试经历 2022-08-29',
