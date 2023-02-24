@@ -6,24 +6,18 @@
           <img :src="item" alt="" class="posa">
         </el-carousel-item>
       </el-carousel>
+      <div class="pages-index-title" >
+        <div class="pages-index-move">已有的事，后必再有。已行的事，后必再行</div>
+      </div>
+      <div class="article">
+        <template v-for="(i, k) of articList">
+          <nuxt-link to="/vuea/meet"><el-link type="success">{{ i }}</el-link></nuxt-link>
+          <el-divider>
+            <el-icon><star-filled /></el-icon>
+          </el-divider>
+        </template>
+      </div>
     </client-only>
-    <div class="pages-index-title" >
-      <div class="pages-index-move">已有的事，后必再有。已行的事，后必再行</div>
-    </div>
-    <div class="article">
-      <nuxt-link to="/vuea/meet"><el-link type="success">多希望话题不断园游会永不打烊：2022年面试经历 2022-08-29</el-link></nuxt-link>
-      <el-divider>
-        <el-icon><star-filled /></el-icon>
-      </el-divider>
-      <nuxt-link to="/vuea/meet"><el-link type="success">冷空气跟琉璃在清晨很有透明感：2022年面试经历 2022-08-29</el-link></nuxt-link>
-      <el-divider>
-        <el-icon><star-filled /></el-icon>
-      </el-divider>
-      <nuxt-link to="/vuea/meet"><el-link type="success">鸡蛋糕跟你嘴角果酱我都想要尝：2022年面试经历 2022-08-29</el-link></nuxt-link>
-      <el-divider>
-        <el-icon><star-filled /></el-icon>
-      </el-divider>
-    </div>
   </div>
 </template>
 
@@ -42,6 +36,11 @@ const list = [
   swiperT,
   swiperH,
   swiperF
+]
+const articList = [
+    '多希望话题不断园游会永不打烊：2022年面试经历 2022-08-29',
+    '冷空气跟琉璃在清晨很有透明感：2022年面试经历 2022-08-29',
+    '鸡蛋糕跟你嘴角果酱我都想要尝：2022年面试经历 2022-08-29'
 ]
 </script>
 
