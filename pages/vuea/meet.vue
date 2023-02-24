@@ -2,13 +2,13 @@
   <common-flex direction="column" align="center" class="pages-argue w100">
     <div class="pages-argue-title">Vue篇</div>
     <div v-for="i of list">
-      <div class="pages-argue-company">{{ i.company }} {{i.time}}</div>
+      <h3 class="pages-argue-company">{{ i.company }} {{i.time}}</h3>
       <div class="pages-argue-container w1000">
         <div class="pages-argue-container-subject" v-for="(j, index) of i.subject">
-          <span>{{ index + 1 }}、{{ j }}</span>
+          <p>{{ index + 1 }}：{{ j }}</p>
         </div>
         <div class="pages-argue-container-total" v-for="k of i.total">
-          <span>{{ k }}</span>
+          <p>{{ k }}</p>
         </div>
       </div>
     </div>
@@ -115,7 +115,7 @@ const list = [
   }
   &-company {
     margin-top: 25px;
-    @include nFont(18 #333 600)
+    //@include nFont(18 #333 600)
   }
   &-container {
     margin-top: 20px;
@@ -124,10 +124,11 @@ const list = [
     background-color: #F6F6F6;
     &-subject {
       margin-bottom: 24px;
-      @include nFont(16 #888 600)
+      //@include nFont(16 #888 600)
     }
     &-total {
-      @include nFont(16 #666 600 26)
+      //@include nFont(16 #666 600 26)
+      line-height: 30px;
     }
   }
 
