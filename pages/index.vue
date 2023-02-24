@@ -1,7 +1,7 @@
 <template>
   <div class="pages-index posr">
     <client-only>
-      <el-carousel :interval="5000" :loop="true" trigger="click" height="540px">
+      <el-carousel :interval="11000" :loop="true" trigger="click" height="540px">
         <el-carousel-item v-for="item in list" :key="item" class="swiper-item posr">
           <img :src="item" alt="" class="posa">
         </el-carousel-item>
