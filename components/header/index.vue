@@ -58,9 +58,9 @@ const handleSelect = (e) => {
   @include nFont(16);
   background-color: rgba(255, 255, 255, .1);
   &-logo {
-    margin-top: -12px;
+    margin-top: -8px;
     margin-left: 18px;
-    @include wh(50);
+    @include wh(44);
     cursor: pointer;
   }
   .el-menu--horizontal {
