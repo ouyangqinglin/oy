@@ -18,16 +18,16 @@
           <el-menu-item index="1-1">
             <span>vue2响应式原理</span>
           </el-menu-item>
-          <el-menu-item index="1-2">
-            <span>vue3响应式原理</span>
-          </el-menu-item>
+<!--          <el-menu-item index="1-2">-->
+<!--            <span>vue3响应式原理</span>-->
+<!--          </el-menu-item>-->
         </el-sub-menu>
-        <el-menu-item index="2">
-          <span>diff算法</span>
-        </el-menu-item>
-        <el-menu-item index="3">
-          <span>虚拟dom</span>
-        </el-menu-item>
+<!--        <el-menu-item index="2">-->
+<!--          <span>diff算法</span>-->
+<!--        </el-menu-item>-->
+<!--        <el-menu-item index="3">-->
+<!--          <span>虚拟dom</span>-->
+<!--        </el-menu-item>-->
       </el-menu>
     </client-only>
     <nuxt-page></nuxt-page>

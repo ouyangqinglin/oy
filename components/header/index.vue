@@ -15,7 +15,7 @@
           <template #title>面试系列</template>
           <el-menu-item index="2-1">Vue</el-menu-item>
         </el-sub-menu>
-        <el-menu-item index="3">nuxt</el-menu-item>
+<!--        <el-menu-item index="3">nuxt</el-menu-item>-->
         <div class="w40"></div>
       </el-menu>
     </client-only>

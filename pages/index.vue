@@ -263,7 +263,7 @@ const articList = [
   }
   .article {
     margin-left: 160px;
-    width: 466px;
+    width: 395px;
   }
   .el-icon svg {
     color: #00BD6FFF;
