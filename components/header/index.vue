@@ -10,10 +10,10 @@
       >
         <img @click="navigateTo('/')" class="comp-common-header-logo" src="@img/index/favicon.png" alt="">
         <div class="flex-grow" />
-        <el-menu-item index="1">首页</el-menu-item>
+        <el-menu-item index="1"><h3>首页</h3></el-menu-item>
         <el-sub-menu index="2">
-          <template #title>面试系列</template>
-          <el-menu-item index="2-1">Vue</el-menu-item>
+          <template #title><h3>面试系列</h3></template>
+          <el-menu-item index="2-1"><h4>Vue</h4></el-menu-item>
         </el-sub-menu>
 <!--        <el-menu-item index="3">nuxt</el-menu-item>-->
         <div class="w40"></div>

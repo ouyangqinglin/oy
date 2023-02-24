@@ -13,10 +13,10 @@
       >
         <el-sub-menu index="1">
           <template #title>
-            <span>响应式原理</span>
+            <h3>响应式原理</h3>
           </template>
           <el-menu-item index="1-1">
-            <span>vue2响应式原理</span>
+            <h4>vue2响应式原理</h4>
           </el-menu-item>
 <!--          <el-menu-item index="1-2">-->
 <!--            <span>vue3响应式原理</span>-->
