@@ -47,7 +47,8 @@ const handleSelect = (e) => {
   &-logo {
     margin-top: -12px;
     margin-left: 18px;
-    @include wh(50)
+    @include wh(50);
+    cursor: pointer;
   }
   .el-menu--horizontal {
     //margin-top: 15px;

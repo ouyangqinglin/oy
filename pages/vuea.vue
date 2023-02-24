@@ -31,6 +31,7 @@
       </el-menu>
     </client-only>
     <nuxt-page></nuxt-page>
+    <el-backtop :right="100" :bottom="100" />
   </common-flex>
 </template>
 

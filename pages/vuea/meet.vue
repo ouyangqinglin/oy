@@ -43,7 +43,7 @@ const list = [
     total: [
         `hr谈及我2年经验，又说前端这个职位工资普遍相对低，问了我上一家公司待遇后，就开始压工资，
         我说出了我的目标，不要看我才两年经验，得看技术匹配，她说加个微信，她再向上反馈一下，再通知我，等我出了公司门，
-        她发微信说问下周一入职可以吗，欣然接受了，不过感觉这hr谈薪资就压得特别低，感觉被压了`
+        她发微信说问下周一入职可以吗，接受了，不过感觉这hr谈薪资就压得特别低，感觉被压了`
     ]
   },
   {
@@ -109,7 +109,7 @@ const list = [
 
 <style lang="scss">
 .pages-argue {
-  padding-left: 20px;
+  padding: 20px 0;
   &-title {
     @include nFont(24 #222 600)
   }
@@ -124,10 +124,10 @@ const list = [
     background-color: #F6F6F6;
     &-subject {
       margin-bottom: 24px;
-      @include nFont(16 #777 600)
+      @include nFont(16 #888 600)
     }
     &-total {
-      @include nFont(16 #555 600)
+      @include nFont(16 #666 600 26)
     }
   }
 
