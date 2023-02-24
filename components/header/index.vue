@@ -31,10 +31,16 @@ const routeMap = {
   '1': '/',
   '2-1': '/vuea/meet'
 }
+watch(() => route.path, (v) => {
+  for (let k in routeMap) {
+    if (routeMap[k] === route.path) {
+      defaultRoute.value = k
+      break
+    }
+  }
+})
 
-for (let k in routeMap) {
-  if (routeMap[k] === route.path) defaultRoute.value = k
-}
+
 
 const handleSelect = (e) => {
   if (routeMap[e]) navigateTo(routeMap[e])
