@@ -40,14 +40,18 @@ export default defineNuxtConfig({
         css: {
             preprocessorOptions: {
                 scss: {
-                    additionalData: '@import "@/assets/css/_mixin.scss";',
+                    additionalData: [
+                        '@import "@/assets/css/_mixin.scss";',
+                    ],
                 },
             },
+
         },
     },
     css: [
         '~/assets/css/_presetClass.scss',
-        'animate.css/animate.css'
+        'animate.css/animate.css',
+        'element-plus/dist/index.css'
     ],
     postcss: {
         config: true
