@@ -32,14 +32,18 @@ const routeMap = {
   '2-1': '/vuea/meet',
   '3': '/myself'
 }
+
 watch(() => route.path, (v) => {
   for (let k in routeMap) {
-    if (routeMap[k] === route.path) {
+    if ([routeMap[k], `${routeMap[k]}/`].includes(route.path) ) {
       defaultRoute.value = k
       break
     }
   }
+}, {
+  immediate: true
 })
+
 
 
 
