@@ -16,7 +16,6 @@
 </template>
 
 <script setup>
-import CommonFlex from "@comp/common/flex.vue";
 
 const list = [
   {

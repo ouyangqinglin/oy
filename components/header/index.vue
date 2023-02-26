@@ -22,8 +22,6 @@
   </div>
 </template>
 
-
-
 <script setup>
 const route = useRoute()
 let defaultRoute = ref('1')
