@@ -1,6 +1,5 @@
 <template>
   <common-flex direction="column" align="center" class="pages-argue w1000">
-    <h2>Vue篇</h2>
     <div v-for="i of list">
       <h3 class="pages-argue-company">{{ i.company }} {{i.time}}</h3>
       <div class="pages-argue-container w1000">
