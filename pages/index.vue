@@ -35,7 +35,6 @@
       <div class="bird-container bird-container--four">
         <div class="bird bird--four"></div>
       </div>
-
     </div>
   </div>
 </template>
@@ -49,6 +48,7 @@ export default {
 <script setup>
 import { StarFilled } from '@element-plus/icons-vue'
 import swiperT from '@img/index/swiper-2.png'
+
 const list = [
   swiperT
 ]
@@ -60,8 +60,6 @@ const articList = [
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
-
 *,
 *::before,
 *::after {
@@ -86,7 +84,7 @@ const articList = [
 }
 
 .bird {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+  background-image: url(assets/image/index/bird-cells-new.svg);
   background-size: auto 100%;
   width: 88px;
   height: 125px;

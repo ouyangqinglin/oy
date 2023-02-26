@@ -11,11 +11,11 @@
         <img @click="navigateTo('/')" class="comp-common-header-logo" src="@img/index/favicon.png" alt="">
         <div class="flex-grow" />
         <el-menu-item index="1"><h3>首页</h3></el-menu-item>
+        <el-menu-item index="3"><h3>个人简历</h3></el-menu-item>
         <el-sub-menu index="2">
           <template #title><h3>面试系列</h3></template>
           <el-menu-item index="2-1"><h4>Vue</h4></el-menu-item>
         </el-sub-menu>
-<!--        <el-menu-item index="3">nuxt</el-menu-item>-->
         <div class="w40"></div>
       </el-menu>
     </client-only>
@@ -29,7 +29,8 @@ const route = useRoute()
 let defaultRoute = ref('1')
 const routeMap = {
   '1': '/',
-  '2-1': '/vuea/meet'
+  '2-1': '/vuea/meet',
+  '3': '/myself'
 }
 watch(() => route.path, (v) => {
   for (let k in routeMap) {
