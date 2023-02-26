@@ -44,9 +44,6 @@ watch(() => route.path, (v) => {
   immediate: true
 })
 
-
-
-
 const handleSelect = (e) => {
   if (routeMap[e]) navigateTo(routeMap[e])
 }
