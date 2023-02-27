@@ -257,6 +257,8 @@ const articList = [
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+      width: 100%;
+      object-fit: contain;
     }
   }
   .article {
