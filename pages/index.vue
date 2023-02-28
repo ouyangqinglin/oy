@@ -1,14 +1,10 @@
 <template>
   <div class="pages-index posr">
+    <img src="@img/index/swiper-2.png">
+    <div class="pages-index-title" >
+      <h3 class="pages-index-move">已有的事，后必再有。已行的事，后必再行</h3>
+    </div>
     <client-only>
-      <el-carousel :interval="11000" :loop="true" trigger="click" height="540px">
-        <el-carousel-item v-for="item in list" :key="item" class="swiper-item posr">
-          <img :src="item" alt="" class="posa">
-        </el-carousel-item>
-      </el-carousel>
-      <div class="pages-index-title" >
-        <h3 class="pages-index-move">已有的事，后必再有。已行的事，后必再行</h3>
-      </div>
       <div class="article">
         <template v-for="(i, k) of articList">
           <nuxt-link to="/vuea/meet"><el-link type="success">{{ i }}</el-link></nuxt-link>
@@ -47,11 +43,7 @@ export default {
 
 <script setup>
 import { StarFilled } from '@element-plus/icons-vue'
-import swiperT from '@img/index/swiper-2.png'
 
-const list = [
-  swiperT
-]
 const articList = [
     '多希望话题不断园游会永不打烊：2022年面试经历 2022-08-29',
     '冷空气跟琉璃在清晨很有透明感：2022年面试经历 2022-08-29',
@@ -230,6 +222,7 @@ const articList = [
 }
 .pages-index {
   width: 100%;
+  @include cImg();
   &-title {
     margin: 40px auto;
     text-align: center;
@@ -248,19 +241,7 @@ const articList = [
       opacity: .9;
     }
   }
-  .el-carousel {
-    width: 100%;
-  }
-  .swiper-item {
-    background-color: #eae7e4;
-    img {
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      object-fit: contain;
-    }
-  }
+
   .article {
     margin-left: 160px;
     width: 420px;
