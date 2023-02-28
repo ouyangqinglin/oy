@@ -49,18 +49,18 @@ const handleSelect = (e) => {
 
 <style lang="scss">
 .comp-common-header {
-  padding-top: 15px;
+  padding-top: 8px;
   position: sticky;
   top: 0;
   width: 100%;
-  height: 60px;
+  height: 50px;
   z-index: 520;
   @include nFont(16);
   background-color: rgba(255, 255, 255, .1);
   &-logo {
-    margin-top: -6px;
+    margin-top: -1px;
     margin-left: 18px;
-    @include wh(40);
+    @include wh(36);
     cursor: pointer;
   }
   .el-menu--horizontal {
