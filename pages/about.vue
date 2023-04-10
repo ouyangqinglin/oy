@@ -1,5 +1,7 @@
 <template>
-  <common-flex justify="center" align="center">Vue系列更新中...</common-flex>
+  <div class="pages-test">
+
+  </div>
 </template>
 
 <script>
@@ -8,6 +10,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
+.pages-test {
 
+}
 </style>

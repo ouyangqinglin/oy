@@ -40,3 +40,4 @@ npm run preview
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+预览地址：[楼南雨的个人网站](https://oyql.netlify.app/)
